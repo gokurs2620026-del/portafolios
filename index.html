@@ -124,197 +124,103 @@
     .card-desc { font-size: 12px; color: #8a9ab8; line-height: 1.8; }
     .card-link { font-size: 10px; font-weight: 700; color: var(--orange); letter-spacing: 2px; text-transform: uppercase; margin-top: auto; }
 
-    /* ══════════════════════════════════
-       PROYECTOS — SCROLL CONTINUO
-    ══════════════════════════════════ */
-    .projects-section {
-      background: #111;
-      padding: 80px 0;
-    }
-    .projects-header {
-      padding: 0 64px 56px;
-    }
+    /* ── PROYECTOS ── */
+    .projects-section { background: #111; padding: 80px 0; }
+    .projects-header { padding: 0 64px 56px; }
     .projects-header .sec-eyebrow::before { background: var(--orange); }
     .projects-header .sec-title { color: #fff; margin-bottom: 0; }
 
-    .proj-row {
-      display: grid;
-      grid-template-columns: 280px 1fr;
-      border-top: 1px solid rgba(255,255,255,0.07);
-      position: relative;
-      transition: background 0.4s;
-    }
+    .proj-row { display: grid; grid-template-columns: 280px 1fr; border-top: 1px solid rgba(255,255,255,0.07); position: relative; transition: background 0.4s; }
     .proj-row:last-child { border-bottom: 1px solid rgba(255,255,255,0.07); }
     .proj-row:hover { background: rgba(255,255,255,0.012); }
-    .proj-row::before {
-      content: '';
-      width: 3px;
-      background: var(--orange);
-      position: absolute;
-      left: 0; top: 0;
-      height: 0;
-      transition: height 0.5s ease;
-      z-index: 2;
-    }
+    .proj-row::before { content: ''; width: 3px; background: var(--orange); position: absolute; left: 0; top: 0; height: 0; transition: height 0.5s ease; z-index: 2; }
     .proj-row:hover::before { height: 100%; }
 
-    /* Info izquierda */
-    .proj-row-info {
-      padding: 52px 40px 52px 64px;
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-      border-right: 1px solid rgba(255,255,255,0.07);
-      position: relative;
-    }
-    .proj-row-num {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 90px;
-      color: rgba(255,255,255,0.04);
-      line-height: 1;
-      position: absolute;
-      top: 20px; right: 16px;
-      pointer-events: none;
-    }
-    .proj-row-tag {
-      font-size: 9px;
-      font-weight: 800;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--orange);
-    }
-    .panel-name {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 34px;
-      color: #fff;
-      letter-spacing: 2px;
-      line-height: 1;
-    }
-    .panel-desc {
-      font-size: 12px;
-      color: rgba(255,255,255,0.42);
-      line-height: 2;
-      flex: 1;
-    }
+    .proj-row-info { padding: 52px 40px 52px 64px; display: flex; flex-direction: column; gap: 18px; border-right: 1px solid rgba(255,255,255,0.07); position: relative; }
+    .proj-row-num { font-family: 'Bebas Neue', sans-serif; font-size: 90px; color: rgba(255,255,255,0.04); line-height: 1; position: absolute; top: 20px; right: 16px; pointer-events: none; }
+    .proj-row-tag { font-size: 9px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; color: var(--orange); }
+    .panel-name { font-family: 'Bebas Neue', sans-serif; font-size: 34px; color: #fff; letter-spacing: 2px; line-height: 1; }
+    .panel-desc { font-size: 12px; color: rgba(255,255,255,0.42); line-height: 2; flex: 1; }
     .panel-tools { margin-top: 6px; }
-    .tools-label {
-      font-size: 9px;
-      font-weight: 800;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.22);
-      margin-bottom: 10px;
-    }
+    .tools-label { font-size: 9px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.22); margin-bottom: 10px; }
     .tools-list { display: flex; flex-wrap: wrap; gap: 7px; }
-    .tool-tag {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
-      color: rgba(255,255,255,0.45);
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      padding: 4px 11px;
-      transition: all 0.2s;
-    }
-    .proj-row:hover .tool-tag {
-      border-color: rgba(240,90,34,0.35);
-      color: rgba(240,90,34,0.75);
-    }
+    .tool-tag { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.45); font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 4px 11px; transition: all 0.2s; }
+    .proj-row:hover .tool-tag { border-color: rgba(240,90,34,0.35); color: rgba(240,90,34,0.75); }
 
-    /* Visual derecha — grid de imágenes pequeñas */
-    .proj-row-visual {
-      padding: 52px 64px 52px 48px;
-      display: flex;
-      align-items: center;
-    }
+    .proj-row-visual { padding: 52px 64px 52px 48px; display: flex; align-items: center; }
+    .img-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; width: 100%; max-width: 100%; }
+    .img-grid.single { grid-template-columns: 1fr; max-width: 700px; }
+    .proj-img { overflow: hidden; position: relative; background: #1e1e1e; cursor: pointer; aspect-ratio: 4/3; max-height: 280px; border-radius: 6px; transition: all 0.3s ease; }
+    .img-grid.single .proj-img { aspect-ratio: 16/9; max-height: 540px; border-radius: 8px; }
+    .proj-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s ease; }
+    .proj-img:hover img { transform: scale(1.07); }
+    .proj-img-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(240,90,34,0.55) 0%, transparent 60%); opacity: 0; transition: opacity 0.3s; display: flex; align-items: flex-end; padding: 10px 12px; }
+    .proj-img:hover .proj-img-overlay { opacity: 1; }
+    .proj-img-overlay span { font-size: 9px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #fff; }
 
-    .img-grid {
+    /* ── PODCAST ── */
+    .podcast-section { background: var(--gray); padding: 60px 48px; }
+
+    .podcast-images {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      width: 100%;
-      max-width: 100%;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 36px;
     }
-    .img-grid.single {
-      grid-template-columns: 1fr;
-      max-width: 700px;
-    }
-
-    .proj-img {
-      overflow: hidden;
+    .podcast-img-item {
       position: relative;
-      background: #1e1e1e;
-      cursor: pointer;
-      aspect-ratio: 4/3;    /* ← tamaño controlado por proporción */
-      max-height: 280px;    /* ← reducido para imágenes más pequeñas */
-      border-radius: 6px;
-      transition: all 0.3s ease;
+      overflow: hidden;
+      border-radius: 12px;
+      aspect-ratio: 1/1;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
     }
-    .img-grid.single .proj-img {
-      aspect-ratio: 16/9;
-      max-height: 540px;    /* ← mucho más grande */
-      border-radius: 8px;
-    }
-
-    .proj-img img {
+    .podcast-img-item img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
-      transition: transform 0.6s ease;
+      transition: transform 0.4s ease;
     }
-    .proj-img:hover img { transform: scale(1.07); }
+    .podcast-img-item:hover img { transform: scale(1.05); }
 
-    .proj-img-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(to top, rgba(240,90,34,0.55) 0%, transparent 60%);
-      opacity: 0;
-      transition: opacity 0.3s;
-      display: flex;
-      align-items: flex-end;
-      padding: 10px 12px;
+    .podcast-text {
+      font-size: 14px;
+      color: #5a6b8a;
+      line-height: 1.9;
+      margin-bottom: 32px;
     }
-    .proj-img:hover .proj-img-overlay { opacity: 1; }
-    .proj-img-overlay span {
-      font-size: 9px;
-      font-weight: 800;
-      letter-spacing: 2px;
-      text-transform: uppercase;
+
+    .podcast-spotify-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #1DB954;
       color: #fff;
+      padding: 16px 36px;
+      text-decoration: none;
+      border-radius: 50px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: background 0.2s, transform 0.2s;
     }
-
-    /* ── PODCAST ── */
-    .podcast-section { background: var(--gray); padding: 60px 48px; }
-    .podcast-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); }
-    .pcard-podcast { background: #fff; padding: 24px; display: flex; gap: 18px; align-items: flex-start; transition: all 0.3s; cursor: pointer; }
-    .pcard-podcast:hover { background: var(--navy); }
-    .pcard-podcast:hover .podcast-title { color: #fff; }
-    .pcard-podcast:hover .podcast-ep { color: var(--orange); }
-    .pcard-podcast:hover .podcast-desc { color: var(--muted); }
-    .podcast-num { font-family: 'Bebas Neue', sans-serif; font-size: 56px; letter-spacing: 2px; color: var(--border); line-height: 1; min-width: 64px; transition: color 0.3s; }
-    .pcard-podcast:hover .podcast-num { color: rgba(240,90,34,0.3); }
-    .podcast-info { flex: 1; padding-top: 6px; }
-    .podcast-ep { font-size: 10px; color: var(--orange); font-weight: 800; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 6px; }
-    .podcast-title { font-size: 15px; font-weight: 800; color: var(--navy); text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.3s; }
-    .podcast-desc { font-size: 12px; color: #999; line-height: 1.7; margin-top: 8px; transition: color 0.3s; }
-    .podcast-play { width: 36px; height: 36px; background: var(--orange); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 6px; }
-    .podcast-play svg { width: 14px; height: 14px; fill: #fff; }
+    .podcast-spotify-btn:hover { background: #17a349; transform: translateY(-2px); }
+    .podcast-spotify-btn svg { width: 22px; height: 22px; fill: #fff; flex-shrink: 0; }
 
     /* ── CTA ── */
     .cta { background: var(--navy); padding: 56px 48px; position: relative; overflow: hidden; }
     .cta::before { content: 'HABLEMOS'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Bebas Neue', sans-serif; font-size: 140px; letter-spacing: 10px; color: rgba(255,255,255,0.03); white-space: nowrap; pointer-events: none; }
-    .cta-line { width: 4px; height: 80px; background: var(--orange); position: absolute; left: 200px; top: 50%; transform: translateY(-50%); }
+    .cta-line { display: none; }
     .cta-content { position: relative; z-index: 1; }
     .cta-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; }
     .cta-title { font-family: 'Bebas Neue', sans-serif; font-size: 52px; color: #fff; letter-spacing: 3px; line-height: 1; }
     .cta-title span { color: var(--orange); }
     .cta-sub { font-size: 13px; color: var(--muted); margin-top: 12px; max-width: 400px; }
-    .cta-actions { display: flex; gap: 14px; margin-top: 28px; flex-wrap: wrap; }
-    .cta-btn { background: var(--orange); color: #fff; font-family: 'Raleway', sans-serif; font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; border: none; padding: 16px 32px; cursor: pointer; transition: background 0.2s; }
+    .contact-info { font-size: 14px; color: #fff; line-height: 1.8; margin-top: 16px; }
+    .cta-btn { background: var(--orange); color: #fff; font-family: 'Raleway', sans-serif; font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; border: none; padding: 16px 32px; cursor: pointer; transition: background 0.2s; display: inline-block; text-decoration: none; }
     .cta-btn:hover { background: var(--orange-light); }
-    .cta-btn-ghost { background: transparent; color: var(--muted); font-family: 'Raleway', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; border: 1px solid rgba(255,255,255,0.15); padding: 16px 32px; cursor: pointer; transition: all 0.2s; }
-    .cta-btn-ghost:hover { border-color: var(--orange); color: var(--orange); }
 
     /* ── FOOTER ── */
     footer { padding: 28px 48px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border); }
@@ -358,8 +264,8 @@
       .proj-img { max-height: 240px; }
       .img-grid.single .proj-img { max-height: 300px; }
       .podcast-section { padding: 48px 28px; }
+      .podcast-images { gap: 16px; }
       .cta { padding: 48px 28px; }
-      .cta-line { left: 120px; }
       footer { padding: 24px 28px; }
     }
 
@@ -398,21 +304,24 @@
       .proj-row-info { padding: 32px 20px; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.07); }
       .proj-row-num { font-size: 60px; top: 16px; right: 16px; }
       .proj-row-visual { padding: 28px 20px 36px; }
-      .img-grid { max-width: 100%; gap: 12px; }
-      .proj-img { max-height: 200px; aspect-ratio: 4/3; }
-      .img-grid.single .proj-img { max-height: 250px; aspect-ratio: 16/9; }
+      .img-grid { gap: 10px; grid-template-columns: repeat(2, 1fr); }
+      .proj-img { max-height: 160px; }
+      .img-grid.single .proj-img { max-height: 220px; }
       .podcast-section { padding: 40px 20px; }
-      .podcast-grid { grid-template-columns: 1fr; }
-      .podcast-num { font-size: 40px; min-width: 48px; }
-      .pcard-podcast { padding: 18px; }
+      .podcast-images { grid-template-columns: 1fr; gap: 16px; }
+      .podcast-img-item { aspect-ratio: 16/9; border-radius: 10px; }
+      .podcast-text { font-size: 13px; }
+      .podcast-spotify-btn { width: 100%; justify-content: center; padding: 16px 24px; font-size: 13px; }
       .cta { padding: 40px 20px; }
       .cta::before { display: none; }
-      .cta-line { display: none; }
       .cta-title { font-size: 38px; }
       .cta-sub { font-size: 12px; }
-      .cta-actions { flex-direction: column; gap: 10px; }
-      .cta-btn, .cta-btn-ghost { width: 100%; text-align: center; padding: 16px; }
       footer { padding: 24px 20px; flex-direction: column; gap: 16px; text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .podcast-images { grid-template-columns: 1fr; }
+      .podcast-img-item { aspect-ratio: 4/3; }
     }
 
     @media (max-width: 400px) {
@@ -435,7 +344,7 @@
       <a href="#podcast">Podcast</a>
       <a href="#contacto">Contacto</a>
     </div>
-    <button class="nav-cta"><span>Contáctame</span></button>
+    <button class="nav-cta" onclick="document.querySelector('#contacto').scrollIntoView({behavior:'smooth'})"><span>Contáctame</span></button>
     <button class="hamburger" id="hamburger" aria-label="Menú">
       <span></span><span></span><span></span>
     </button>
@@ -448,7 +357,7 @@
     <a href="#proyectos"   onclick="closeMenu()">Proyectos</a>
     <a href="#podcast"     onclick="closeMenu()">Podcast</a>
     <a href="#contacto"    onclick="closeMenu()">Contacto</a>
-    <button class="mob-cta" onclick="closeMenu()">Contáctame</button>
+    <button class="mob-cta" onclick="closeMenu(); document.querySelector('#contacto').scrollIntoView({behavior:'smooth'})">Contáctame</button>
   </div>
 
   <!-- HERO -->
@@ -467,12 +376,11 @@
       <p class="hero-sub">Estudiante apasionado por el mercadeo, la publicidad y el diseño creativo. Creo contenido visual que conecta marcas con personas.</p>
       <div class="hero-actions">
         <button class="hero-btn" onclick="document.querySelector('#proyectos').scrollIntoView({behavior:'smooth'})">Ver proyectos →</button>
-        <button class="hero-btn-ghost">Descargar CV</button>
       </div>
     </div>
     <div class="hero-right">
       <div class="hero-photo-wrap">
-        <img src="yo2.jpeg" alt="Foto de Andrés"/>
+        <img src="imagenes/yo2.jpeg" alt="Foto de Andrés"/>
       </div>
     </div>
   </section>
@@ -481,14 +389,13 @@
   <div class="about-strip">
     <div class="about-left">
       <h2>Sobre<br>Mí</h2>
-      <p>Creativo con enfoque estratégico y pasión por las marcas.</p>
+      <p></p>
     </div>
     <div class="about-right">
-      <p>Soy estudiante de Mercadeo y Publicidad con un fuerte interés en el diseño visual, la estrategia de marca y la comunicación digital. Me apasiona crear experiencias que conecten emocionalmente con las personas y construyan identidades memorables.</p>
+      <p>Soy estudiante de Mercadeo y Publicidad, con interés en el desarrollo de estrategias de marca, comunicación digital y creación de contenido. Me caracterizo por ser una persona creativa, proactiva y orientada al aprendizaje constante, con habilidades para trabajar en equipo, analizar tendencias y desarrollar ideas enfocadas en conectar las marcas con su audiencia de manera efectiva.</p>
       <div class="about-tags">
         <span class="atag">Adobe Illustrator</span>
         <span class="atag">Photoshop</span>
-        <span class="atag">InDesign</span>
         <span class="atag">Social Media</span>
         <span class="atag">Branding</span>
         <span class="atag">Canva</span>
@@ -508,8 +415,7 @@
           <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
         </div>
         <div class="card-title">Estrategia de marca</div>
-        <p class="card-desc">Posicionamiento, identidad y narrativa para diferenciar una marca de la competencia.</p>
-        <div class="card-link">Ver más →</div>
+        <p class="card-desc">Tengo conocimientos en estrategia de marca y desarrollo de identidad visual, con enfoque en comunicación clara y posicionamiento de marca.</p>
       </div>
       <div class="card">
         <div class="card-num">02</div>
@@ -517,29 +423,26 @@
           <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
         </div>
         <div class="card-title">Social media</div>
-        <p class="card-desc">Contenido creativo para redes sociales que genera comunidad y engagement real.</p>
-        <div class="card-link">Ver más →</div>
+        <p class="card-desc">Conocimientos en gestión de redes sociales, creación de contenido y desarrollo de estrategias de comunicación digital orientadas al posicionamiento y la interacción con la audiencia.</p>
       </div>
       <div class="card">
         <div class="card-num">03</div>
         <div class="card-icon">
           <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
         </div>
-        <div class="card-title">Diseño creativo</div>
-        <p class="card-desc">Piezas visuales, campañas y material publicitario con impacto y recordación.</p>
-        <div class="card-link">Ver más →</div>
+        <div class="card-title">INGLÉS</div>
+        <p class="card-desc">Conocimientos en gestión de redes sociales, creación de contenido y desarrollo de estrategias de comunicación digital orientadas al posicionamiento y la interacción con la audiencia.</p>
       </div>
     </div>
   </section>
 
-  <!-- PROYECTOS — SCROLL CONTINUO -->
+  <!-- PROYECTOS -->
   <section class="projects-section" id="proyectos">
     <div class="projects-header">
       <div class="sec-eyebrow"><span>Proyectos</span></div>
       <div class="sec-title">Mi trabajo</div>
     </div>
 
-    <!-- PROYECTO 01 — PUBLICIDAD -->
     <div class="proj-row">
       <div class="proj-row-info">
         <div class="proj-row-num">01</div>
@@ -559,27 +462,26 @@
       </div>
       <div class="proj-row-visual">
         <div class="img-grid">
-          <div class="proj-img" onclick="openModal('cartier.jpeg')">
-            <img src="cartier.jpeg" alt="Cartier"/>
+          <div class="proj-img" onclick="openModal('imagenes/cartier.jpeg')">
+            <img src="imagenes/cartier.jpeg" alt="Cartier"/>
             <div class="proj-img-overlay"><span>Cartier</span></div>
           </div>
-          <div class="proj-img" onclick="openModal('cartier2.jpeg')">
-            <img src="cartier2.jpeg" alt="Cartier 2"/>
+          <div class="proj-img" onclick="openModal('imagenes/cartier2.jpeg')">
+            <img src="imagenes/cartier2.jpeg" alt="Cartier 2"/>
             <div class="proj-img-overlay"><span>Cartier 2</span></div>
           </div>
-          <div class="proj-img" onclick="openModal('colombina.jpeg')">
-            <img src="colombina.jpeg" alt="Colombina"/>
+          <div class="proj-img" onclick="openModal('imagenes/colombina.jpeg')">
+            <img src="imagenes/colombina.jpeg" alt="Colombina"/>
             <div class="proj-img-overlay"><span>Colombina</span></div>
           </div>
-          <div class="proj-img" onclick="openModal('pony.jpeg')">
-            <img src="pony.jpeg" alt="Pony"/>
+          <div class="proj-img" onclick="openModal('imagenes/pony.jpeg')">
+            <img src="imagenes/pony.jpeg" alt="Pony"/>
             <div class="proj-img-overlay"><span>Pony</span></div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- PROYECTO 02 — CREACIÓN DE MARCA -->
     <div class="proj-row">
       <div class="proj-row-info">
         <div class="proj-row-num">02</div>
@@ -593,46 +495,56 @@
           <div class="tools-list">
             <span class="tool-tag">Illustrator</span>
             <span class="tool-tag">Photoshop</span>
-            <span class="tool-tag">InDesign</span>
           </div>
         </div>
       </div>
       <div class="proj-row-visual">
         <div class="img-grid">
-          <div class="proj-img" onclick="openModal('minibites1.jpeg')">
-            <img src="minibites1.jpeg" alt="Minibites 1"/>
+          <div class="proj-img" onclick="openModal('imagenes/minibites1.jpeg')">
+            <img src="imagenes/minibites1.jpeg" alt="Minibites 1"/>
             <div class="proj-img-overlay"><span>Minibites</span></div>
           </div>
-          <div class="proj-img" onclick="openModal('minibites2.jpeg')">
-            <img src="minibites2.jpeg" alt="Minibites 2"/>
+          <div class="proj-img" onclick="openModal('imagenes/minibites2.jpeg')">
+            <img src="imagenes/minibites2.jpeg" alt="Minibites 2"/>
             <div class="proj-img-overlay"><span>Minibites</span></div>
           </div>
-          <div class="proj-img" onclick="openModal('minibites3.jpeg')">
-            <img src="minibites3.jpeg" alt="Minibites 3"/>
+          <div class="proj-img" onclick="openModal('imagenes/minibites3.jpeg')">
+            <img src="imagenes/minibites3.jpeg" alt="Minibites 3"/>
             <div class="proj-img-overlay"><span>Minibites</span></div>
           </div>
-          <div class="proj-img" onclick="openModal('minibites4.jpeg')">
-            <img src="minibites4.jpeg" alt="Minibites 4"/>
+          <div class="proj-img" onclick="openModal('imagenes/minibites4.jpeg')">
+            <img src="imagenes/minibites4.jpeg" alt="Minibites 4"/>
             <div class="proj-img-overlay"><span>Minibites</span></div>
           </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- PODCAST -->
   <section class="podcast-section" id="podcast">
     <div class="sec-eyebrow"><span>Podcast</span></div>
     <div class="sec-title">Mis episodios</div>
-    <div style="display: flex; align-items: flex-start; gap: 50px; flex-wrap: wrap; margin-bottom: 30px;">
-      <div style="display: flex; gap: 20px; align-items: center;">
-        <img src="moodboardpodcast.jpeg" alt="Moodboard Podcast" style="width: 180px; height: 180px; object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 8px;">
-        <img src="entrevistado.jpeg" alt="Entrevistado" style="width: 180px; height: 180px; object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 8px;">
-        <img src="podcasts.jpeg" alt="Podcasts" style="width: 180px; height: 180px; object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 8px;">
+
+    <div class="podcast-images">
+      <div class="podcast-img-item">
+        <img src="imagenes/moodboardpodcast.jpeg" alt="Moodboard Podcast"/>
       </div>
-      <div style="flex: 1; max-width: 400px;">
-        <p style="font-size: 14px; color: #5a6b8a; line-height: 1.8;">Episodio especial: El panel de los productores musicales en la música urbana. Conversación profunda sobre la producción, tendencias y el futuro de la música latina.</p>
+      <div class="podcast-img-item">
+        <img src="imagenes/entrevistado.jpeg" alt="Entrevistado"/>
+      </div>
+      <div class="podcast-img-item">
+        <img src="imagenes/podcasts.jpeg" alt="Podcasts"/>
       </div>
     </div>
+
+    <p class="podcast-text">Este proyecto consistió en la creación y desarrollo integral de un podcast enfocado en el rol del productor musical dentro de la industria contemporánea. El contenido explora temas como la inspiración, los procesos creativos, la construcción sonora y la identidad artística, a través de entrevistas realizadas a una productora caleña y a un productor español. Dentro del proyecto participé en todas las etapas de producción, incluyendo la conceptualización de la idea, investigación, desarrollo de guion, estructuración narrativa, dirección de entrevistas, locución, grabación y edición del episodio.</p>
+
     <div style="text-align: center;">
-      <a href="https://open.spotify.com/episode/1BTcHLzNFIVubRf4ovJb4F?si=7enpqdPGRRinD8uKsh20Lg&t=371" target="_blank" style="background: var(--orange); color: #fff; padding: 16px 32px; text-decoration: none; border-radius: 4px; font-family: 'Raleway', sans-serif; font-size: 16px; font-weight: 700; text-transform: uppercase; transition: background 0.2s; display: inline-block;">Escuchar en Spotify →</a>
+      <a href="https://open.spotify.com/episode/1BTcHLzNFIVubRf4ovJb4F?si=7enpqdPGRRinD8uKsh20Lg&t=371" target="_blank" class="podcast-spotify-btn">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+        Escuchar en Spotify
+      </a>
     </div>
   </section>
 
@@ -640,13 +552,10 @@
   <div class="cta" id="contacto">
     <div class="cta-line"></div>
     <div class="cta-content">
-      <div class="cta-eyebrow">¿Listo para trabajar juntos?</div>
+      <div class="cta-eyebrow">Contáctanos</div>
       <div class="cta-title">¿Tienes un proyecto<br>en <span>mente?</span></div>
       <p class="cta-sub">Hablemos sobre cómo puedo ayudarte a conectar tu marca con las personas que importan.</p>
-      <div class="cta-actions">
-        <button class="cta-btn" onclick="window.location='mailto:tucorreo@gmail.com'">Hablemos →</button>
-        <button class="cta-btn-ghost">Ver CV</button>
-      </div>
+      <p class="contact-info">Tel: 3227194622<br>Correo: camilito2607@gmail.com<br>Instagram: @Sosixx_20</p>
     </div>
   </div>
 
